@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect (() => {
     getRecipes();
-  }, [query]);
+  }, [query]);  
 
   const getRecipes = async () => {
     const response = await fetch(exampleReq);
@@ -39,7 +39,7 @@ const App = () => {
   return(
     <div className="App">
       <form onSubmit={getSearch} className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+        <input className="search-bar" type="text" placeholder="Food to cook" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">Search</button>
       </form>
       <div className="recipes">
